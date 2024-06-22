@@ -1,0 +1,16 @@
+load("@aspect_rules_ts//ts:proto.bzl", "ts_proto_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+proto_library(
+    name = "aspect_plugin_proto",
+    srcs = ["aspect_plugin.proto"],
+    deps = ["//proto/bazel/buildeventstream:build_event_stream_proto"],
+)
+
+ts_proto_library(
+    name = "aspect_plugin_ts",
+    node_modules = "//:node_modules",
+    proto = "aspect_plugin_proto",
+    deps = ["//proto/bazel/buildeventstream:build_event_stream_ts"],
+    visibility = ["//src:__pkg__"],
+)

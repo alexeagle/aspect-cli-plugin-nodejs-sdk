@@ -1,0 +1,22 @@
+load("@aspect_rules_ts//ts:proto.bzl", "ts_proto_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+proto_library(
+    name = "package_load_metrics_proto",
+    srcs = ["package_load_metrics.proto"],
+    visibility = [
+        "//proto:__pkg__",
+        "//proto/bazel/buildeventstream:__pkg__",
+    ],
+    deps = [
+        "@com_google_protobuf//:duration_proto",
+    ],
+)
+
+ts_proto_library(
+    name = "package_load_metrics_ts",
+    gen_connect_es = False,
+    node_modules = "//:node_modules",
+    proto = "package_load_metrics_proto",
+    visibility = ["//proto/bazel/buildeventstream:__pkg__"],
+)

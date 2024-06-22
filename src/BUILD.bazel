@@ -1,0 +1,30 @@
+load("@aspect_rules_js//js:defs.bzl", "js_binary")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
+
+ts_project(
+    name = "ts",
+    srcs = [
+        "connect.ts",
+        "index.ts",
+    ],
+    deps = [
+        "//proto:aspect_plugin_ts",
+        "//:node_modules/@connectrpc/connect",
+        "//:node_modules/@connectrpc/connect-fastify",
+        "//:node_modules/@types/node",
+        "//:node_modules/fastify",
+    ],
+)
+
+js_binary(
+    name = "src",
+    entry_point = "index.js",
+    data = [
+        "//:package_json",
+        ":ts",
+    ],
+    env = {
+        # Allow running the resulting binary directly in the execroot rather than with 'bazel run'
+        "BAZEL_BINDIR": ".",
+    },
+)

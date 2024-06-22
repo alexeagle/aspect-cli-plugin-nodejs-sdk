@@ -1,0 +1,19 @@
+load("@aspect_rules_ts//ts:proto.bzl", "ts_proto_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+proto_library(
+    name = "option_filters_proto",
+    srcs = ["option_filters.proto"],
+    visibility = [
+        "//proto:__pkg__",
+        "//proto/bazel/command_line:__pkg__",
+    ],
+)
+
+ts_proto_library(
+    name = "option_filters_ts",
+    gen_connect_es = False,
+    node_modules = "//:node_modules",
+    proto = "option_filters_proto",
+    visibility = ["//proto/bazel/command_line:__pkg__"],
+)

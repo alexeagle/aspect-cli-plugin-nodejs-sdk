@@ -1,0 +1,25 @@
+load("@aspect_rules_ts//ts:proto.bzl", "ts_proto_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+proto_library(
+    name = "command_line_proto",
+    srcs = ["command_line.proto"],
+    visibility = [
+        "//proto:__pkg__",
+        "//proto/bazel/buildeventstream:__pkg__",
+    ],
+    deps = [
+        "//proto/bazel/options:option_filters_proto",
+    ],
+)
+
+ts_proto_library(
+    name = "command_line_ts",
+    gen_connect_es = False,
+    node_modules = "//:node_modules",
+    proto = "command_line_proto",
+    visibility = ["//proto/bazel/buildeventstream:__pkg__"],
+    deps = [
+        "//proto/bazel/options:option_filters_ts",
+    ],
+)
