@@ -1,9 +1,18 @@
 import type { ConnectRouter } from "@connectrpc/connect";
 import * as proto from "../proto/aspect_plugin_pb.js";
 import { Plugin } from "../proto/aspect_plugin_connect.js";
+import { Health } from "../proto/grpc/health/v1/health_connect.js";
+import { HealthCheckResponse, HealthCheckResponse_ServingStatus } from "../proto/grpc/health/v1/health_pb.js";
 
-export default (router: ConnectRouter) =>
-  router.service(Plugin as /*FIXME: */any, {
+type FIXME = any;
+
+export default (router: ConnectRouter) => {
+  router.service(Health as FIXME, {
+    async check(_) {
+        return new HealthCheckResponse({status: HealthCheckResponse_ServingStatus.SERVING})
+    }
+  });
+  router.service(Plugin as FIXME, {
     async bEPEventCallback(_) {
         return new proto.BEPEventCallbackRes();
     },
@@ -20,9 +29,18 @@ export default (router: ConnectRouter) =>
         return new proto.PostRunHookRes();
     },
     async customCommands(_) {
-        return new proto.CustomCommandsRes();
+        return new proto.CustomCommandsRes({
+            commands: [
+                {
+                    use: 'test-command',
+                    shortDesc: 'test short description',
+                    longDesc: 'testing a longer description',
+                },
+            ],
+        });
     },
     async executeCustomCommand(_) {
         return new proto.ExecuteCustomCommandRes();
     },
-  }, {});
+  });
+}

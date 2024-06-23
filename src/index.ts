@@ -2,9 +2,15 @@
 import { fastify } from "fastify";
 import { fastifyConnectPlugin } from "@connectrpc/connect-fastify";
 import routes from "./connect.js";
+import { Interceptor } from "@connectrpc/connect";
 
 const host = 'localhost';
 const port = 4339;
+
+const logger: Interceptor = (next) => async (req) => {
+  console.log(`recevied message on ${req.url}`);
+  return await next(req);
+};
 
 async function main() {
   const server = fastify({"http2": true});

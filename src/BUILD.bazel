@@ -9,6 +9,7 @@ ts_project(
     ],
     deps = [
         "//proto:aspect_plugin_ts",
+        "//proto/grpc/health/v1:health_ts",
         "//:node_modules/@connectrpc/connect",
         "//:node_modules/@connectrpc/connect-fastify",
         "//:node_modules/@types/node",

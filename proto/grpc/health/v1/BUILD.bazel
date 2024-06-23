@@ -1,0 +1,17 @@
+load("@aspect_rules_ts//ts:proto.bzl", "ts_proto_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+proto_library(
+    name = "health_proto",
+    srcs = ["health.proto"],
+)
+
+ts_proto_library(
+    name = "health_ts",
+    node_modules = "//:node_modules",
+    proto = "health_proto",
+    visibility = [
+        "//proto/bazel/buildeventstream:__pkg__",
+        "//src:__pkg__",
+    ],
+)
