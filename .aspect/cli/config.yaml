@@ -7,6 +7,6 @@ plugins:
     - name: fix-visibility
       from: github.com/aspect-build/plugin-fix-visibility
       version: v0.1.0
-    # - name: hello-world
-    #   from: bazel-bin/src/src_/src
-    #   log_level: INFO
+    - name: hello-world
+      from: bazel-bin/src/src_/src
+      log_level: INFO

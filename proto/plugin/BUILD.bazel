@@ -1,0 +1,17 @@
+load("@aspect_rules_ts//ts:proto.bzl", "ts_proto_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+proto_library(
+    name = "grpc_stdio_proto",
+    srcs = ["grpc_stdio.proto"],
+    deps = ["@com_google_protobuf//:empty_proto"],
+)
+
+ts_proto_library(
+    name = "grpc_stdio_ts",
+    node_modules = "//:node_modules",
+    proto = "grpc_stdio_proto",
+    visibility = [
+        "//src:__pkg__",
+    ],
+)
