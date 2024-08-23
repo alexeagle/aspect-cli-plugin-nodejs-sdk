@@ -3,6 +3,11 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@buf/aspect-build_aspect-cli.bufbuild_es": "*",
+    "@buf/aspect-build_aspect-cli.connectrpc_es": "*",
+    "@buf/googleapis_googleapis.connectrpc_es": "*",
+    "@buf/grpc_grpc.connectrpc_es": "*",
+    "@buf/grpc_grpc.bufbuild_es": "*",
     "@bufbuild/protobuf": "^1",
     "@connectrpc/connect": "^1",
     "@connectrpc/connect-node": "^1",

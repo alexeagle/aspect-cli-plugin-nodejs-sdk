@@ -1,0 +1,9 @@
+version: v2
+modules:
+  - path: .
+    excludes:
+      - bazel-bin
+      - bazel-aspect_cli_plugin_nodejs_sdk
+      - bazel-out
+      - bazel-testlogs
+      - node_modules

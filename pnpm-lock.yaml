@@ -8,6 +8,21 @@ importers:
 
   .:
     dependencies:
+      '@buf/aspect-build_aspect-cli.bufbuild_es':
+        specifier: '*'
+        version: 0.1.1-20240823141552-838fc9b232ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/aspect-build_aspect-cli.connectrpc_es':
+        specifier: '*'
+        version: 0.13.1-20240823141552-838fc9b232ed.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es':
+        specifier: '*'
+        version: 0.13.1-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/grpc_grpc.bufbuild_es':
+        specifier: '*'
+        version: 0.1.1-20220906225147-428bdb303f1c.1(@bufbuild/protobuf@1.8.0)
+      '@buf/grpc_grpc.connectrpc_es':
+        specifier: '*'
+        version: 0.13.1-20220906225147-428bdb303f1c.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
       '@bufbuild/protobuf':
         specifier: ^1
         version: 1.8.0
@@ -26,10 +41,10 @@ importers:
     devDependencies:
       '@bufbuild/protoc-gen-es':
         specifier: ^1
-        version: 1.8.0(@bufbuild/protobuf@1.8.0)
+        version: 1.0.0(@bufbuild/protobuf@1.8.0)
       '@connectrpc/protoc-gen-connect-es':
         specifier: ^1
-        version: 1.0.0(@bufbuild/protoc-gen-es@1.8.0)(@connectrpc/connect@1.0.0)
+        version: 1.0.0(@bufbuild/protoc-gen-es@1.0.0)(@connectrpc/connect@1.0.0)
       '@eslint/js':
         specifier: ^9
         version: 9.3.0
@@ -51,30 +66,744 @@ importers:
 
 packages:
 
+  /@buf/aspect-build_aspect-cli.bufbuild_es@0.1.1-20240823141552-838fc9b232ed.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/aspect-build_aspect-cli.bufbuild_es/-/aspect-build_aspect-cli.bufbuild_es-0.1.1-20240823141552-838fc9b232ed.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@buf/bazel_bazel.bufbuild_es': 0.1.1-20240821181942-cead1444dede.1(@bufbuild/protobuf@1.8.0)
+      '@buf/bazel_remote-apis.bufbuild_es': 0.1.1-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 0.1.1-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/aspect-build_aspect-cli.bufbuild_es@1.3.0-20240823141552-838fc9b232ed.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/aspect-build_aspect-cli.bufbuild_es/-/aspect-build_aspect-cli.bufbuild_es-1.3.0-20240823141552-838fc9b232ed.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@buf/bazel_bazel.bufbuild_es': 1.3.0-20240821181942-cead1444dede.1(@bufbuild/protobuf@1.8.0)
+      '@buf/bazel_remote-apis.bufbuild_es': 1.3.0-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/aspect-build_aspect-cli.connectrpc_es@0.13.1-20240823141552-838fc9b232ed.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/aspect-build_aspect-cli.connectrpc_es/-/aspect-build_aspect-cli.connectrpc_es-0.13.1-20240823141552-838fc9b232ed.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/aspect-build_aspect-cli.bufbuild_es': 1.3.0-20240823141552-838fc9b232ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/bazel_bazel.connectrpc_es': 0.13.1-20240821181942-cead1444dede.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/bazel_remote-apis.connectrpc_es': 0.13.1-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es': 0.13.1-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/bazel_bazel.bufbuild_es@0.1.1-20240821181942-cead1444dede.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/bazel_bazel.bufbuild_es/-/bazel_bazel.bufbuild_es-0.1.1-20240821181942-cead1444dede.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@buf/bazel_remote-apis.bufbuild_es': 0.1.1-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 0.1.1-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/bazel_bazel.bufbuild_es@1.3.0-20240821181942-cead1444dede.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/bazel_bazel.bufbuild_es/-/bazel_bazel.bufbuild_es-1.3.0-20240821181942-cead1444dede.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@buf/bazel_remote-apis.bufbuild_es': 1.3.0-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/bazel_bazel.connectrpc_es@0.13.1-20240821181942-cead1444dede.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/bazel_bazel.connectrpc_es/-/bazel_bazel.connectrpc_es-0.13.1-20240821181942-cead1444dede.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/bazel_bazel.bufbuild_es': 1.3.0-20240821181942-cead1444dede.1(@bufbuild/protobuf@1.8.0)
+      '@buf/bazel_remote-apis.connectrpc_es': 0.13.1-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es': 0.13.1-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/bazel_remote-apis.bufbuild_es@0.1.1-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/bazel_remote-apis.bufbuild_es/-/bazel_remote-apis.bufbuild_es-0.1.1-20230602030542-b202931f28c0.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 0.1.1-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_envoy.bufbuild_es': 0.1.1-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 0.1.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 0.1.1-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)
+      '@buf/grpc_grpc.bufbuild_es': 0.1.1-20230516211939-d8bc6b0fb32a.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 0.1.1-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 0.1.1-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 0.1.1-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/bazel_remote-apis.bufbuild_es@1.3.0-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/bazel_remote-apis.bufbuild_es/-/bazel_remote-apis.bufbuild_es-1.3.0-20230602030542-b202931f28c0.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 1.3.0-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_envoy.bufbuild_es': 1.3.0-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 1.3.0-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)
+      '@buf/grpc_grpc.bufbuild_es': 1.3.0-20230516211939-d8bc6b0fb32a.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 1.3.0-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 1.3.0-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 1.3.0-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/bazel_remote-apis.connectrpc_es@0.13.1-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/bazel_remote-apis.connectrpc_es/-/bazel_remote-apis.connectrpc_es-0.13.1-20230602030542-b202931f28c0.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/bazel_remote-apis.bufbuild_es': 1.3.0-20230602030542-b202931f28c0.1(@bufbuild/protobuf@1.8.0)
+      '@buf/cncf_xds.connectrpc_es': 0.13.1-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/envoyproxy_envoy.connectrpc_es': 0.13.1-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/envoyproxy_protoc-gen-validate.connectrpc_es': 0.13.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es': 0.13.1-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/grpc_grpc.connectrpc_es': 0.13.1-20230516211939-d8bc6b0fb32a.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/opencensus_opencensus.connectrpc_es': 0.13.1-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/opentelemetry_opentelemetry.connectrpc_es': 0.13.1-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/prometheus_client-model.connectrpc_es': 0.13.1-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/cncf_xds.bufbuild_es@0.1.1-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/cncf_xds.bufbuild_es/-/cncf_xds.bufbuild_es-0.1.1-20220906175918-f6f9b109ae2f.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 0.1.1-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 0.1.1-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/cncf_xds.bufbuild_es@0.1.1-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/cncf_xds.bufbuild_es/-/cncf_xds.bufbuild_es-0.1.1-20230428204815-197fca8a74c5.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 0.1.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 0.1.1-20230329151039-5ae7f88519b0.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/cncf_xds.bufbuild_es@1.3.0-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/cncf_xds.bufbuild_es/-/cncf_xds.bufbuild_es-1.3.0-20220906175918-f6f9b109ae2f.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 1.3.0-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/cncf_xds.bufbuild_es@1.3.0-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/cncf_xds.bufbuild_es/-/cncf_xds.bufbuild_es-1.3.0-20230428204815-197fca8a74c5.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 1.3.0-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20230329151039-5ae7f88519b0.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/cncf_xds.connectrpc_es@0.13.1-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/cncf_xds.connectrpc_es/-/cncf_xds.connectrpc_es-0.13.1-20220906175918-f6f9b109ae2f.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 1.3.0-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.connectrpc_es': 0.13.1-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es': 0.13.1-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/cncf_xds.connectrpc_es@0.13.1-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/cncf_xds.connectrpc_es/-/cncf_xds.connectrpc_es-0.13.1-20230428204815-197fca8a74c5.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 1.3.0-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.connectrpc_es': 0.13.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es': 0.13.1-20230329151039-5ae7f88519b0.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/envoyproxy_envoy.bufbuild_es@0.1.1-20220906222042-3b42f172a19b.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_envoy.bufbuild_es/-/envoyproxy_envoy.bufbuild_es-0.1.1-20220906222042-3b42f172a19b.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 0.1.1-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 0.1.1-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 0.1.1-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 0.1.1-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 0.1.1-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 0.1.1-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/envoyproxy_envoy.bufbuild_es@0.1.1-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_envoy.bufbuild_es/-/envoyproxy_envoy.bufbuild_es-0.1.1-20230516211932-3afde44c0a3a.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 0.1.1-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 0.1.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 0.1.1-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 0.1.1-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 0.1.1-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 0.1.1-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/envoyproxy_envoy.bufbuild_es@1.3.0-20220906222042-3b42f172a19b.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_envoy.bufbuild_es/-/envoyproxy_envoy.bufbuild_es-1.3.0-20220906222042-3b42f172a19b.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 1.3.0-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 1.3.0-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 1.3.0-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 1.3.0-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 1.3.0-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/envoyproxy_envoy.bufbuild_es@1.3.0-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_envoy.bufbuild_es/-/envoyproxy_envoy.bufbuild_es-1.3.0-20230516211932-3afde44c0a3a.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 1.3.0-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 1.3.0-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 1.3.0-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 1.3.0-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 1.3.0-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/envoyproxy_envoy.connectrpc_es@0.13.1-20220906222042-3b42f172a19b.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_envoy.connectrpc_es/-/envoyproxy_envoy.connectrpc_es-0.13.1-20220906222042-3b42f172a19b.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/cncf_xds.connectrpc_es': 0.13.1-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/envoyproxy_envoy.bufbuild_es': 1.3.0-20220906222042-3b42f172a19b.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.connectrpc_es': 0.13.1-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es': 0.13.1-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/opencensus_opencensus.connectrpc_es': 0.13.1-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/opentelemetry_opentelemetry.connectrpc_es': 0.13.1-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/prometheus_client-model.connectrpc_es': 0.13.1-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/envoyproxy_envoy.connectrpc_es@0.13.1-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_envoy.connectrpc_es/-/envoyproxy_envoy.connectrpc_es-0.13.1-20230516211932-3afde44c0a3a.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/cncf_xds.connectrpc_es': 0.13.1-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/envoyproxy_envoy.bufbuild_es': 1.3.0-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.connectrpc_es': 0.13.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es': 0.13.1-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/opencensus_opencensus.connectrpc_es': 0.13.1-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/opentelemetry_opentelemetry.connectrpc_es': 0.13.1-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/prometheus_client-model.connectrpc_es': 0.13.1-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/envoyproxy_protoc-gen-validate.bufbuild_es@0.1.1-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_protoc-gen-validate.bufbuild_es/-/envoyproxy_protoc-gen-validate.bufbuild_es-0.1.1-20220812150255-45685e052c7e.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/envoyproxy_protoc-gen-validate.bufbuild_es@0.1.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_protoc-gen-validate.bufbuild_es/-/envoyproxy_protoc-gen-validate.bufbuild_es-0.1.1-20221025150516-6607b10f00ed.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/envoyproxy_protoc-gen-validate.bufbuild_es@1.3.0-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_protoc-gen-validate.bufbuild_es/-/envoyproxy_protoc-gen-validate.bufbuild_es-1.3.0-20220812150255-45685e052c7e.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/envoyproxy_protoc-gen-validate.bufbuild_es@1.3.0-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_protoc-gen-validate.bufbuild_es/-/envoyproxy_protoc-gen-validate.bufbuild_es-1.3.0-20221025150516-6607b10f00ed.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/envoyproxy_protoc-gen-validate.connectrpc_es@0.13.1-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_protoc-gen-validate.connectrpc_es/-/envoyproxy_protoc-gen-validate.connectrpc_es-0.13.1-20220812150255-45685e052c7e.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 1.3.0-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/envoyproxy_protoc-gen-validate.connectrpc_es@0.13.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/envoyproxy_protoc-gen-validate.connectrpc_es/-/envoyproxy_protoc-gen-validate.connectrpc_es-0.13.1-20221025150516-6607b10f00ed.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 1.3.0-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/googleapis_googleapis.bufbuild_es@0.1.1-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.bufbuild_es/-/googleapis_googleapis.bufbuild_es-0.1.1-20220906171522-62f35d8aed11.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/googleapis_googleapis.bufbuild_es@0.1.1-20230329151039-5ae7f88519b0.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.bufbuild_es/-/googleapis_googleapis.bufbuild_es-0.1.1-20230329151039-5ae7f88519b0.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/googleapis_googleapis.bufbuild_es@0.1.1-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.bufbuild_es/-/googleapis_googleapis.bufbuild_es-0.1.1-20230502210827-cc916c318597.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/googleapis_googleapis.bufbuild_es@0.1.1-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.bufbuild_es/-/googleapis_googleapis.bufbuild_es-0.1.1-20240729201550-8bc2c51e08c4.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/googleapis_googleapis.bufbuild_es@1.3.0-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.bufbuild_es/-/googleapis_googleapis.bufbuild_es-1.3.0-20220906171522-62f35d8aed11.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/googleapis_googleapis.bufbuild_es@1.3.0-20230329151039-5ae7f88519b0.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.bufbuild_es/-/googleapis_googleapis.bufbuild_es-1.3.0-20230329151039-5ae7f88519b0.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/googleapis_googleapis.bufbuild_es@1.3.0-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.bufbuild_es/-/googleapis_googleapis.bufbuild_es-1.3.0-20230502210827-cc916c318597.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/googleapis_googleapis.bufbuild_es@1.3.0-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.bufbuild_es/-/googleapis_googleapis.bufbuild_es-1.3.0-20240729201550-8bc2c51e08c4.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/googleapis_googleapis.connectrpc_es@0.13.1-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.connectrpc_es/-/googleapis_googleapis.connectrpc_es-0.13.1-20220906171522-62f35d8aed11.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/googleapis_googleapis.connectrpc_es@0.13.1-20230329151039-5ae7f88519b0.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.connectrpc_es/-/googleapis_googleapis.connectrpc_es-0.13.1-20230329151039-5ae7f88519b0.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20230329151039-5ae7f88519b0.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/googleapis_googleapis.connectrpc_es@0.13.1-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.connectrpc_es/-/googleapis_googleapis.connectrpc_es-0.13.1-20230502210827-cc916c318597.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/googleapis_googleapis.connectrpc_es@0.13.1-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/googleapis_googleapis.connectrpc_es/-/googleapis_googleapis.connectrpc_es-0.13.1-20240729201550-8bc2c51e08c4.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20240729201550-8bc2c51e08c4.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/grpc_grpc.bufbuild_es@0.1.1-20220906225147-428bdb303f1c.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/grpc_grpc.bufbuild_es/-/grpc_grpc.bufbuild_es-0.1.1-20220906225147-428bdb303f1c.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 0.1.1-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_envoy.bufbuild_es': 0.1.1-20220906222042-3b42f172a19b.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 0.1.1-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 0.1.1-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 0.1.1-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 0.1.1-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 0.1.1-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/grpc_grpc.bufbuild_es@0.1.1-20230516211939-d8bc6b0fb32a.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/grpc_grpc.bufbuild_es/-/grpc_grpc.bufbuild_es-0.1.1-20230516211939-d8bc6b0fb32a.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 0.1.1-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_envoy.bufbuild_es': 0.1.1-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 0.1.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 0.1.1-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 0.1.1-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 0.1.1-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 0.1.1-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/grpc_grpc.bufbuild_es@1.3.0-20220906225147-428bdb303f1c.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/grpc_grpc.bufbuild_es/-/grpc_grpc.bufbuild_es-1.3.0-20220906225147-428bdb303f1c.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 1.3.0-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_envoy.bufbuild_es': 1.3.0-20220906222042-3b42f172a19b.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 1.3.0-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 1.3.0-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 1.3.0-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 1.3.0-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/grpc_grpc.bufbuild_es@1.3.0-20230516211939-d8bc6b0fb32a.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/grpc_grpc.bufbuild_es/-/grpc_grpc.bufbuild_es-1.3.0-20230516211939-d8bc6b0fb32a.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@buf/cncf_xds.bufbuild_es': 1.3.0-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_envoy.bufbuild_es': 1.3.0-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0)
+      '@buf/envoyproxy_protoc-gen-validate.bufbuild_es': 1.3.0-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)
+      '@buf/googleapis_googleapis.bufbuild_es': 1.3.0-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.bufbuild_es': 1.3.0-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 1.3.0-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)
+      '@buf/prometheus_client-model.bufbuild_es': 1.3.0-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/grpc_grpc.connectrpc_es@0.13.1-20220906225147-428bdb303f1c.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/grpc_grpc.connectrpc_es/-/grpc_grpc.connectrpc_es-0.13.1-20220906225147-428bdb303f1c.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/cncf_xds.connectrpc_es': 0.13.1-20220906175918-f6f9b109ae2f.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/envoyproxy_envoy.connectrpc_es': 0.13.1-20220906222042-3b42f172a19b.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/envoyproxy_protoc-gen-validate.connectrpc_es': 0.13.1-20220812150255-45685e052c7e.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es': 0.13.1-20220906171522-62f35d8aed11.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/grpc_grpc.bufbuild_es': 1.3.0-20220906225147-428bdb303f1c.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.connectrpc_es': 0.13.1-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/opentelemetry_opentelemetry.connectrpc_es': 0.13.1-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/prometheus_client-model.connectrpc_es': 0.13.1-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/grpc_grpc.connectrpc_es@0.13.1-20230516211939-d8bc6b0fb32a.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/grpc_grpc.connectrpc_es/-/grpc_grpc.connectrpc_es-0.13.1-20230516211939-d8bc6b0fb32a.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/cncf_xds.connectrpc_es': 0.13.1-20230428204815-197fca8a74c5.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/envoyproxy_envoy.connectrpc_es': 0.13.1-20230516211932-3afde44c0a3a.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/envoyproxy_protoc-gen-validate.connectrpc_es': 0.13.1-20221025150516-6607b10f00ed.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/googleapis_googleapis.connectrpc_es': 0.13.1-20230502210827-cc916c318597.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/grpc_grpc.bufbuild_es': 1.3.0-20230516211939-d8bc6b0fb32a.1(@bufbuild/protobuf@1.8.0)
+      '@buf/opencensus_opencensus.connectrpc_es': 0.13.1-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/opentelemetry_opentelemetry.connectrpc_es': 0.13.1-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@buf/prometheus_client-model.connectrpc_es': 0.13.1-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/opencensus_opencensus.bufbuild_es@0.1.1-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opencensus_opencensus.bufbuild_es/-/opencensus_opencensus.bufbuild_es-0.1.1-20220112152708-d1d7ccd1281e.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/opencensus_opencensus.bufbuild_es@0.1.1-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opencensus_opencensus.bufbuild_es/-/opencensus_opencensus.bufbuild_es-0.1.1-20230503204408-7e4755513505.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/opencensus_opencensus.bufbuild_es@1.3.0-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opencensus_opencensus.bufbuild_es/-/opencensus_opencensus.bufbuild_es-1.3.0-20220112152708-d1d7ccd1281e.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/opencensus_opencensus.bufbuild_es@1.3.0-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opencensus_opencensus.bufbuild_es/-/opencensus_opencensus.bufbuild_es-1.3.0-20230503204408-7e4755513505.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/opencensus_opencensus.connectrpc_es@0.13.1-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opencensus_opencensus.connectrpc_es/-/opencensus_opencensus.connectrpc_es-0.13.1-20220112152708-d1d7ccd1281e.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/opencensus_opencensus.bufbuild_es': 1.3.0-20220112152708-d1d7ccd1281e.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/opencensus_opencensus.connectrpc_es@0.13.1-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opencensus_opencensus.connectrpc_es/-/opencensus_opencensus.connectrpc_es-0.13.1-20230503204408-7e4755513505.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/opencensus_opencensus.bufbuild_es': 1.3.0-20230503204408-7e4755513505.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/opentelemetry_opentelemetry.bufbuild_es@0.1.1-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opentelemetry_opentelemetry.bufbuild_es/-/opentelemetry_opentelemetry.bufbuild_es-0.1.1-20220819150313-038316eb6541.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/opentelemetry_opentelemetry.bufbuild_es@0.1.1-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opentelemetry_opentelemetry.bufbuild_es/-/opentelemetry_opentelemetry.bufbuild_es-0.1.1-20230516211923-547fa0c6b925.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/opentelemetry_opentelemetry.bufbuild_es@1.3.0-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opentelemetry_opentelemetry.bufbuild_es/-/opentelemetry_opentelemetry.bufbuild_es-1.3.0-20220819150313-038316eb6541.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/opentelemetry_opentelemetry.bufbuild_es@1.3.0-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opentelemetry_opentelemetry.bufbuild_es/-/opentelemetry_opentelemetry.bufbuild_es-1.3.0-20230516211923-547fa0c6b925.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/opentelemetry_opentelemetry.connectrpc_es@0.13.1-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opentelemetry_opentelemetry.connectrpc_es/-/opentelemetry_opentelemetry.connectrpc_es-0.13.1-20220819150313-038316eb6541.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 1.3.0-20220819150313-038316eb6541.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/opentelemetry_opentelemetry.connectrpc_es@0.13.1-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/opentelemetry_opentelemetry.connectrpc_es/-/opentelemetry_opentelemetry.connectrpc_es-0.13.1-20230516211923-547fa0c6b925.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/opentelemetry_opentelemetry.bufbuild_es': 1.3.0-20230516211923-547fa0c6b925.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/prometheus_client-model.bufbuild_es@0.1.1-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/prometheus_client-model.bufbuild_es/-/prometheus_client-model.bufbuild_es-0.1.1-20220112145104-1d56a02d481a.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/prometheus_client-model.bufbuild_es@0.1.1-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/prometheus_client-model.bufbuild_es/-/prometheus_client-model.bufbuild_es-0.1.1-20230331140308-55bcfe88c9e5.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^0.1.1
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/prometheus_client-model.bufbuild_es@1.3.0-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/prometheus_client-model.bufbuild_es/-/prometheus_client-model.bufbuild_es-1.3.0-20220112145104-1d56a02d481a.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/prometheus_client-model.bufbuild_es@1.3.0-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/prometheus_client-model.bufbuild_es/-/prometheus_client-model.bufbuild_es-1.3.0-20230331140308-55bcfe88c9e5.1.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.3.0
+    dependencies:
+      '@bufbuild/protobuf': 1.8.0
+    dev: false
+
+  /@buf/prometheus_client-model.connectrpc_es@0.13.1-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/prometheus_client-model.connectrpc_es/-/prometheus_client-model.connectrpc_es-0.13.1-20220112145104-1d56a02d481a.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/prometheus_client-model.bufbuild_es': 1.3.0-20220112145104-1d56a02d481a.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@buf/prometheus_client-model.connectrpc_es@0.13.1-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)(@connectrpc/connect@1.0.0):
+    resolution: {registry: https://buf.build/gen/npm/v1/, tarball: https://buf.build/gen/npm/v1/@buf/prometheus_client-model.connectrpc_es/-/prometheus_client-model.connectrpc_es-0.13.1-20230331140308-55bcfe88c9e5.1.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^0.13.1
+    dependencies:
+      '@buf/prometheus_client-model.bufbuild_es': 1.3.0-20230331140308-55bcfe88c9e5.1(@bufbuild/protobuf@1.8.0)
+      '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+    dev: false
+
+  /@bufbuild/protobuf@1.0.0:
+    resolution: {integrity: sha512-oH3jHBrZ6to8Qf4zLg7O8KqSY42kQZNBRXJRMp5uSi0mqE4L8NbyMnZHeOsbXmTb0xpptRyH11LfS+KeVhXzAA==}
+    dev: true
+
+  /@bufbuild/protobuf@1.10.0:
+    resolution: {integrity: sha512-QDdVFLoN93Zjg36NoQPZfsVH9tZew7wKDKyV5qRdj8ntT4wQCOradQjRaTdwMhWUYsgKsvCINKKm87FdEk96Ag==}
+    dev: true
+
   /@bufbuild/protobuf@1.8.0:
     resolution: {integrity: sha512-qR9FwI8QKIveDnUYutvfzbC21UZJJryYrLuZGjeZ/VGz+vXelUkK+xgkOHsvPEdYEdxtgUUq4313N8QtOehJ1Q==}
 
-  /@bufbuild/protoc-gen-es@1.8.0(@bufbuild/protobuf@1.8.0):
-    resolution: {integrity: sha512-jnvBKwHq3o/iOgfKxaxn5Za7ay4oAs8KWgoHiDc9Fsb0g+/d1z+mHlHvmevOiCPcVZsnH6V3LImOJvGStPONpA==}
+  /@bufbuild/protoc-gen-es@1.0.0(@bufbuild/protobuf@1.8.0):
+    resolution: {integrity: sha512-3NZzjw2hbeO7JFUZ70W4UOkaMyOC6hJfJP4uDczyWWTXoCr2TPDfPyLE2U8DBpKufneLS1YBhFJPPv4QvJkiPA==}
     engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
-      '@bufbuild/protobuf': 1.8.0
+      '@bufbuild/protobuf': 1.0.0
     peerDependenciesMeta:
       '@bufbuild/protobuf':
         optional: true
     dependencies:
       '@bufbuild/protobuf': 1.8.0
-      '@bufbuild/protoplugin': 1.8.0
+      '@bufbuild/protoplugin': 1.0.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@bufbuild/protoplugin@1.8.0:
-    resolution: {integrity: sha512-Pb89cTshW+I577qh27VvxGYvZEvQ3zJ8La1OfzPCKugP9d4A4P65WStkAY+aSCiDHk68m1/+mtBb6elfiLPuFg==}
+  /@bufbuild/protoplugin@1.0.0:
+    resolution: {integrity: sha512-L7z2/4MgP36QGEAh8T4OYrdMRv//LAw4gGpL8D3cziE21uP6FLzLKpIxJ4aJBoUyHyS53tpZMpb0djbxYDecFA==}
     dependencies:
-      '@bufbuild/protobuf': 1.8.0
-      '@typescript/vfs': 1.5.0
+      '@bufbuild/protobuf': 1.0.0
+      '@typescript/vfs': 1.6.0(typescript@4.5.2)
+      typescript: 4.5.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@bufbuild/protoplugin@1.10.0:
+    resolution: {integrity: sha512-u6NE4vL0lw1+EK4/PiE/SQB7fKO4LRJNTEScIXVOi2x88K/c8WKc/k0KyEaA0asVBMpwekJQZGnRyj04ZtN5Gg==}
+    dependencies:
+      '@bufbuild/protobuf': 1.10.0
+      '@typescript/vfs': 1.6.0(typescript@4.5.2)
       typescript: 4.5.2
     transitivePeerDependencies:
       - supports-color
@@ -114,7 +843,7 @@ packages:
     dependencies:
       '@bufbuild/protobuf': 1.8.0
 
-  /@connectrpc/protoc-gen-connect-es@1.0.0(@bufbuild/protoc-gen-es@1.8.0)(@connectrpc/connect@1.0.0):
+  /@connectrpc/protoc-gen-connect-es@1.0.0(@bufbuild/protoc-gen-es@1.0.0)(@connectrpc/connect@1.0.0):
     resolution: {integrity: sha512-IE01AKpp7pXA7qIAuaXa9+2OtvoNaAAypxWu7R8MTx7alNURz2Wdao4cUn7dWltZxb3apKO9Aemqufv/1TsZAQ==}
     engines: {node: '>=16.0.0'}
     hasBin: true
@@ -128,8 +857,8 @@ packages:
         optional: true
     dependencies:
       '@bufbuild/protobuf': 1.8.0
-      '@bufbuild/protoc-gen-es': 1.8.0(@bufbuild/protobuf@1.8.0)
-      '@bufbuild/protoplugin': 1.8.0
+      '@bufbuild/protoc-gen-es': 1.0.0(@bufbuild/protobuf@1.8.0)
+      '@bufbuild/protoplugin': 1.10.0
       '@connectrpc/connect': 1.0.0(@bufbuild/protobuf@1.8.0)
     transitivePeerDependencies:
       - supports-color
@@ -385,10 +1114,13 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@typescript/vfs@1.5.0:
-    resolution: {integrity: sha512-AJS307bPgbsZZ9ggCT3wwpg3VbTKMFNHfaY/uF0ahSkYYrPF2dSSKDNIDIQAHm9qJqbLvCsSJH7yN4Vs/CsMMg==}
+  /@typescript/vfs@1.6.0(typescript@4.5.2):
+    resolution: {integrity: sha512-hvJUjNVeBMp77qPINuUvYXj4FyWeeMMKZkxEATEU3hqBAQ7qdTBCUFT7Sp0Zu0faeEtFf+ldXxMEDr/bk73ISg==}
+    peerDependencies:
+      typescript: '*'
     dependencies:
       debug: 4.3.4
+      typescript: 4.5.2
     transitivePeerDependencies:
       - supports-color
     dev: true

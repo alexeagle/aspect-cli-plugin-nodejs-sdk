@@ -1,12 +1,10 @@
 import type { ConnectRouter } from "@connectrpc/connect";
-import * as proto from "../proto/aspect_plugin_pb.js";
-import { Plugin } from "../proto/aspect_plugin_connect.js";
-import { Health } from "../proto/grpc/health/v1/health_connect.js";
-import { HealthCheckResponse, HealthCheckResponse_ServingStatus } from "../proto/grpc/health/v1/health_pb.js";
-import {GRPCStdio} from "../proto/plugin/grpc_stdio_connect.js";
-import { Stream } from "stream";
-import { STATUS_CODES } from "http";
-import { StdioData } from "../proto/plugin/grpc_stdio_pb.js";
+import * as proto from "@buf/aspect-build_aspect-cli.bufbuild_es/aspect/cli/plugin/v1alpha4/plugin_pb.js";
+import { Plugin } from "@buf/aspect-build_aspect-cli.connectrpc_es/aspect/cli/plugin/v1alpha4/plugin_connect.js"
+import { Health } from '@buf/grpc_grpc.connectrpc_es/grpc/health/v1/health_connect.js'
+import { HealthCheckResponse, HealthCheckResponse_ServingStatus } from "@buf/grpc_grpc.bufbuild_es/grpc/health/v1/health_pb.js";
+import { StdioData, StdioData_Channel } from '../proto/plugin/grpc_stdio_pb.js';
+import { GRPCStdio } from "../proto/plugin/grpc_stdio_connect.js";
 
 type FIXME = any;
 
@@ -18,7 +16,10 @@ export default (router: ConnectRouter) => {
   });
   router.service(GRPCStdio as FIXME, {
     async *streamStdio(_) {
-        //yield 
+        yield new StdioData({
+            channel: StdioData_Channel.STDOUT,
+            
+        })
       }
   });
   router.service(Plugin as FIXME, {
